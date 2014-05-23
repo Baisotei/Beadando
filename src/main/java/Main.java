@@ -40,7 +40,7 @@ public class Main {
 		lepes1=rc.nextInt();
 		lepes2=rc.nextInt();
 			if(lepes1>-1 && lepes2>-1 && lepes1<8 && lepes2<8)break;
-			else System.out.println("A megadott kezdőhely nem a táblán található!");
+			else {logger.info("A tabla 8x8-as, az indexeles 0-7.ig tart.");System.out.println("A megadott kezdőhely nem a táblán található!");}
 		}
 		logger.info("A megadott pozició helyes");
 		sakk[lepes1][lepes2]=1;
@@ -50,7 +50,7 @@ public class Main {
 		lepes1=rc.nextInt();
 		lepes2=rc.nextInt();
 		if(lepes1>-1 && lepes2>-1 && lepes1<8 && lepes2<8 && sakk[lepes1][lepes2]==0)break;
-		else System.out.println("A megadott kezdőhely nem a táblán található!");
+		else {logger.info("A tabla 8x8-as, az indexeles 0-7.ig tart.");System.out.println("A megadott kezdőhely nem a táblán található!");}
 		}
 		logger.info("A megadott pozició helyes");
 		sakk[lepes1][lepes2]=2;
