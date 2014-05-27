@@ -47,8 +47,8 @@ public class Main {
 			if(seged.length()>3){System.out.println("Nem megfelelő input! A helyes input:szám,szám!");continue;}
 			lepes1=seged.charAt(0)-48;
 			lepes2=seged.charAt(2)-48;
-		if(lepes1>-1 && lepes2>-1 && lepes1<8 && lepes2<8)break;
-		else {logger.info("A tabla 8x8-as, az indexeles 0-7.ig tart.");System.out.println("A megadott kezdőhely nem a táblán található!");}
+		if(lepes1>-1 && lepes2>-1 && lepes1<8 && lepes2<8 && lepes1!=ai1 && lepes2!=aj1)break;
+		else {logger.info("A tabla 8x8-as, az indexeles 0-7.ig tart.");System.out.println("A megadott kezdőhely nem a táblán található, vagy foglalt!");}
 		
 		}
 		logger.info("A megadott pozició helyes");
