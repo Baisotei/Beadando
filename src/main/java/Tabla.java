@@ -1,4 +1,9 @@
-
+/**
+ * Ez az osztály tartalmazza az aktuális játéktáblát, felviszi a játkosok lépéseit
+ * a táblára, és kirajzolja a táblát.
+ * @author Bardócz Balázs
+ *
+ */
 public class Tabla {
 	/**
 	 * Tömb amiben a játéktábla aktuális állapotát fogjuk tárolni.
@@ -12,16 +17,35 @@ public class Tabla {
 							{0,0,0,0,0,0,0,0,0},	
 							{0,0,0,0,0,0,0,0,0},	
 								};
-	
+	/**
+	 * Az első játékos aktuális poziciójának 
+	 * sorindexét tároló változó getter függvénye.
+	 * @return a fent említett változó
+	 */
 	public int getA() {
 		return a;
 	}
+	/**
+	 * Az első játékos aktuális poziciójának 
+	 * oszlopindexét tároló változó getter függvénye.
+	 * @return a fent említett változó
+	 */
 	public int getB() {
 		return b;
 	}
+	/**
+	 * A második játékos aktuális poziciójának 
+	 * sorindexét tároló változó getter függvénye.
+	 * @return a fent említett változó
+	 */
 	public int getC() {
 		return c;
 	}
+	/**
+	 * A második játékos aktuális poziciójának 
+	 * oszlopindexét tároló változó getter függvénye.
+	 * @return a fent említett változó
+	 */
 	public int getD() {
 		return d;
 	}
@@ -46,6 +70,7 @@ public class Tabla {
 	d=l;
 	}
 	/**
+	 * Rögzíti a játékos lépését a játéktáblára.
 	 * 
 	 * @param i A lépni kívánt mező sorindexe
 	 * @param j A lépni kívánt mező oszlopindexe
@@ -65,6 +90,9 @@ public class Tabla {
 			d=j;
 		}
 	}
+	/**
+	 * Kirajzolja a standard outputra az aktuális játéktáblát.
+	 */
 	public void kirajzol(){
 		System.out.println("  0 1 2 3 4 5 6 7");
 		for(int i=0; i<8; i++){
@@ -74,6 +102,10 @@ public class Tabla {
 			System.out.println();
 		}
 	}
+	/**
+	 * Az aktuális játéktáblát visszaadó getter függvény.
+	 * @return visszadja a játéktáblát
+	 */
 	public int[][] getSajat() {
 		return sajat;
 	}
